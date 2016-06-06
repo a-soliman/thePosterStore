@@ -19,6 +19,16 @@ $(document).ready(function() {
 	$carousel.cycle({ 
 		fx: 'scrollHorz'
 	}).cycle('pause');
+
+	//SET UP buttons.
+	$('.nav-arrow-left').click(function(){
+		$carousel.cycle('prev');
+	});
+
+	$('.nav-arrow-right').click(function(){
+		$carousel.cycle('next');
+	});
+	
 	// Animate in.
 	$('ul.shelf > li').animate({ top: 0, left: 0 }, 700, 'easeOutBounce');
 
